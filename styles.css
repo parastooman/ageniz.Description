@@ -6,6 +6,11 @@
   margin: 24px auto;
   padding: 0 16px;
 }
+.containerdesc p {
+  line-height: 2;          
+  margin: 0 0 0.75rem; 
+}
+
 
 /* ===== Typography ===== */
 .section-titledesc { margin: 20px 0 12px; font-weight: 800; }
@@ -13,7 +18,7 @@
 .subheadingdesc { margin: 10px 0; font-weight: 800; }
 
 .muteddesc { color:  #6b7280; }
-strong { font-weight: 800; }
+
 
 /* ===== Panels / cards ===== */
 .paneldesc {
@@ -34,17 +39,21 @@ strong { font-weight: 800; }
 
 /* ===== Lists ===== */
 .listdesc {
-  list-style: disc;
-  padding: 0 20px;
-  margin: .5rem 0 1rem;
+  list-style: none;
+  margin: 0;
+  padding-right: 1.25rem;  
+  padding-left: 0;
 }
 
-.list--divideddesc > li {
-  padding: 8px 0;
-  border-bottom: 1px dashed #e5e7eb;
+.listdesc li {
+  margin-bottom: 0.5rem;
+  line-height: 1.9;
 }
-.list--divideddesc > li:last-child {
-  border-bottom: 0;
+
+
+.listdesc.list--divideddesc li + li {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 0.4rem;
 }
 
 /* ===== Inline chips for pins ===== */
@@ -54,3 +63,31 @@ strong { font-weight: 800; }
   border-radius: 6px;
   padding: 0 6px;
 }
+
+@media (max-width: 480px) {
+  .section-titledesc {
+    font-size: 1.1rem;
+  }
+
+  .subsection-titledesc {
+    font-size: 1rem;
+  }
+
+  .paneldesc {
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .listdesc {
+    padding-right: 1.2rem;
+    padding-left: 0;
+    word-wrap: break-word;   
+  }
+
+  .listdesc li {
+    display: block;         
+    white-space: normal;     
+  }
+}  
